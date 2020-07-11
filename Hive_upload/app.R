@@ -15,26 +15,14 @@ drv_impala <- JDBC(
   list.files("/usr/hive/lib", pattern = "jar$", full.names = TRUE, recursive = TRUE)
 )
 
-# con_impala_oyo<-dbConnect(drv_impala, "jdbc:hive2://10.203.0.55:21050/oyo_growth",'oyo_growth','growthbiisbest')
+
 
 
 library(DBI)
 library(readxl)
 library(dplyr)
 library(DT)
-###连Oracle
-# Sys.setenv(NLS_LANG='Simplified Chinese_china.AL32UTF8')
-###Roracle 中文 解析
-# library(ROracle)
-# drv=dbDriver("Oracle")
-# host <- "10.200.71.247"
-# port <- 1521
-# sid <- "oyodw"
-# connect.string <- paste(
-#   "(DESCRIPTION=",
-#   "(ADDRESS=(PROTOCOL=tcp)(HOST=", host, ")(PORT=", port, "))",
-#   "(CONNECT_DATA=(SID=", sid, ")))", sep = "")
-# # con_oracle<- dbConnect(drv,username = "OYO_DW_GROWTH_TEMP", password = "enne_NEIOP29!~",dbname = connect.string)
+
 
 library(shiny)
 library(progress)
